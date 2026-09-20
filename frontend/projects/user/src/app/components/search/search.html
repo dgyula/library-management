@@ -1,0 +1,4 @@
+<div class="search-bar">
+  <label for="searchInput">Search for book: </label>
+  <input id="searchInput" [(ngModel)]="searchString" (ngModelChange)="this.searchBook.emit(this.searchString)"/>
+</div>

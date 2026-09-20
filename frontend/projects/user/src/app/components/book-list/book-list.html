@@ -1,0 +1,17 @@
+<h1>Number of books: {{ allBooks.length }}</h1>
+<h2>Books available</h2>
+
+<app-search
+  (searchBook)="filterBooks($event)"
+></app-search>
+
+@for (book of booksToDisplay; track book) {
+  <app-book-card
+    [title]="book.title"
+    [author]="book.author"
+    [description]="book.description"
+    [releaseDate]="book.releaseDate"
+  >
+  </app-book-card>
+}
+
